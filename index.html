@@ -95,6 +95,18 @@
         line-height: 1.05;
       }
 
+      .name-glow {
+        display: inline-block;
+        margin-left: 0.1em;
+        background: linear-gradient(90deg, #ffe4ff, #d8c5ff, #ffb7ea, #ffe4ff);
+        background-size: 220% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 22px rgba(214, 170, 255, 0.7);
+        animation: shimmer 3s ease-in-out infinite;
+      }
+
       .sub {
         margin: 0 auto;
         max-width: 620px;
@@ -177,6 +189,21 @@
           transform: translateY(-4px);
         }
       }
+
+      @keyframes shimmer {
+        0% {
+          background-position: 0% center;
+          transform: translateY(0);
+        }
+        50% {
+          background-position: 100% center;
+          transform: translateY(-1px);
+        }
+        100% {
+          background-position: 0% center;
+          transform: translateY(0);
+        }
+      }
     </style>
   </head>
   <body>
@@ -186,7 +213,7 @@
     <main class="wrap">
       <section class="hero">
         <div class="kicker">A tiny page just for Hina</div>
-        <h1>To Hina, with starlight ✨</h1>
+        <h1>To <span class="name-glow">Hina</span>, with starlight ✨</h1>
         <p class="sub">
           A little world of giraffes, soft violet skies, and the kind of heartfelt beauty
           that feels like your favorite anime moments.
