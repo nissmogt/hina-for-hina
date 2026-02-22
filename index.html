@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Hina ✨</title>
+    <style>
+      :root {
+        --violet-1: #6f5cff;
+        --violet-2: #9a7dff;
+        --rose: #ff77c8;
+        --night: #140b2b;
+        --card: rgba(255, 255, 255, 0.12);
+        --text: #f7f4ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Inter", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at top, #2a1455 0%, #190d36 40%, #0e0723 100%);
+        overflow-x: hidden;
+      }
+
+      .stars,
+      .petals {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .stars::before,
+      .stars::after {
+        content: "";
+        position: absolute;
+        inset: -30%;
+        background-image: radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+          radial-gradient(1.5px 1.5px at 70% 40%, #ffe6ff, transparent),
+          radial-gradient(2px 2px at 50% 70%, #c8b5ff, transparent),
+          radial-gradient(1.5px 1.5px at 85% 80%, #fff, transparent);
+        opacity: 0.45;
+        animation: drift 40s linear infinite;
+      }
+
+      .stars::after {
+        animation-direction: reverse;
+        opacity: 0.25;
+      }
+
+      .petals {
+        font-size: 1.1rem;
+      }
+
+      .petals span {
+        position: absolute;
+        top: -10%;
+        opacity: 0.6;
+        animation: fall linear infinite;
+      }
+
+      .wrap {
+        position: relative;
+        z-index: 2;
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 28px 20px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, rgba(154, 125, 255, 0.25), rgba(255, 119, 200, 0.2));
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(4px);
+      }
+
+      .kicker {
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        opacity: 0.9;
+      }
+
+      h1 {
+        margin: 10px 0 6px;
+        font-size: clamp(2rem, 4.8vw, 3.8rem);
+        line-height: 1.05;
+      }
+
+      .sub {
+        margin: 0 auto;
+        max-width: 620px;
+        opacity: 0.95;
+        font-size: clamp(1rem, 1.8vw, 1.2rem);
+      }
+
+      .giraffes {
+        margin-top: 14px;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        letter-spacing: 0.2rem;
+        animation: bob 2.4s ease-in-out infinite;
+      }
+
+      .grid {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        border-radius: 20px;
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 16px;
+        backdrop-filter: blur(6px);
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 1.05rem;
+      }
+
+      .card p {
+        margin: 0;
+        line-height: 1.45;
+        font-size: 0.96rem;
+      }
+
+      .letter {
+        margin-top: 22px;
+        padding: 18px;
+        border-radius: 18px;
+        border: 1px dashed rgba(255, 255, 255, 0.28);
+        background: rgba(13, 8, 34, 0.45);
+      }
+
+      .footer {
+        margin-top: 18px;
+        text-align: center;
+        opacity: 0.9;
+        font-size: 0.93rem;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-10vh) rotate(0deg);
+        }
+        100% {
+          transform: translateY(115vh) rotate(360deg);
+        }
+      }
+
+      @keyframes drift {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(10%);
+        }
+      }
+
+      @keyframes bob {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars"></div>
+    <div class="petals" id="petals"></div>
+
+    <main class="wrap">
+      <section class="hero">
+        <div class="kicker">A tiny page just for Hina</div>
+        <h1>To Hina, with starlight ✨</h1>
+        <p class="sub">
+          A little world of giraffes, soft violet skies, and the kind of heartfelt beauty
+          that feels like your favorite anime moments.
+        </p>
+        <div class="giraffes">🦒 🦒 🦒</div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>🌸 Violet Vibes</h3>
+          <p>
+            Gentle, poetic, and emotional — the feeling of writing letters that carry love
+            farther than words can explain.
+          </p>
+        </article>
+        <article class="card">
+          <h3>🧵 Neighborhood Story Energy</h3>
+          <p>
+            Colorful fashion, big heart, and that warm retro sparkle where friendship and
+            dreams always matter.
+          </p>
+        </article>
+        <article class="card">
+          <h3>🦒 Giraffe Corner</h3>
+          <p>
+            Long-necked, graceful, adorable guardians of this page — because this world is
+            better with giraffes in it.
+          </p>
+        </article>
+      </section>
+
+      <section class="letter">
+        <strong>Dear Hina,</strong>
+        <p>
+          This is a small surprise page made with care. May your day feel soft, bright,
+          and a little magical. You deserve beautiful things.
+        </p>
+        <p>— with love from K 💜</p>
+      </section>
+
+      <p class="footer">Made for Hina · Keep shining 🌙</p>
+    </main>
+
+    <script>
+      const petals = document.getElementById("petals");
+      const symbols = ["✿", "❀", "❁", "✦", "★", "♡"];
+
+      for (let i = 0; i < 26; i++) {
+        const s = document.createElement("span");
+        s.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        s.style.left = `${Math.random() * 100}%`;
+        s.style.animationDuration = `${7 + Math.random() * 13}s`;
+        s.style.animationDelay = `${Math.random() * 8}s`;
+        s.style.opacity = `${0.25 + Math.random() * 0.55}`;
+        petals.appendChild(s);
+      }
+    </script>
+  </body>
+</html>
